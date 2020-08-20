@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+
+    "pattern": 
+    [
+        "III",
+        " S",
+        " S"
+    ],
+
+    "key": 
+    {
+        "I": {"item": "ewethratemod:ewethrate_shard"},
+        "S": {"item": "minecraft:stick"}
+    },
+
+    "result": {"item": "ewethratemod:ewethrate_pickaxe"}
+}   

@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+      "layer0": "ewethratemod:item/ewethrate_helmet"
+    }
+  }

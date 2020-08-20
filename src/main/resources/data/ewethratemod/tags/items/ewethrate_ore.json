@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values":
+    [
+        "ewethratemod:ewethrate_ore",
+        "ewethratemod:ewethrate_ore_nether",
+        "ewethratemod:ewethrate_ore_end"
+    ]
+}

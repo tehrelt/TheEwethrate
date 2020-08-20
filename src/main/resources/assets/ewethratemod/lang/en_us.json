@@ -1,6 +1,17 @@
 {
   "item.ewethratemod.ewethrate_shard": "Ewethrate Shard",
 
+  "item.ewethratemod.ewethrate_sword": "Ewethrate Sword",
+  "item.ewethratemod.ewethrate_pickaxe": "Ewethrate Pickaxe",
+  "item.ewethratemod.ewethrate_axe": "Ewethrate Axe",
+  "item.ewethratemod.ewethrate_shovel": "Ewethrate Shovel",
+  "item.ewethratemod.ewethrate_hoe": "Ewethrate Hoe",
+
+  "item.ewethratemod.ewethrate_helmet": "Ewethrate Helmet",
+  "item.ewethratemod.ewethrate_chestplate": "Ewethrate Chestplate",
+  "item.ewethratemod.ewethrate_leggings": "Ewethrate Leggings",
+  "item.ewethratemod.ewethrate_boots": "Ewethrate Boots",
+
   "block.ewethratemod.ewethrate_block": "Ewethrate Block",
 
   "itemGroup.ewethrate": "The Ewethrate"

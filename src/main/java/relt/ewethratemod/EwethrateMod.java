@@ -3,6 +3,7 @@ package relt.ewethratemod;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import relt.ewethratemod.lists.ArmourMaterialList;
 import relt.ewethratemod.lists.BlockList;
 import relt.ewethratemod.lists.ItemList;
 import relt.ewethratemod.lists.ToolMaterialList;
@@ -56,12 +58,26 @@ public class EwethrateMod
                     ItemList.ewethrate_shard = new Item(new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_shard")),
 
                     ItemList.ewethrate_axe = new AxeItem(ToolMaterialList.ewethrate,6.0f, -3.0f, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_axe")),
+
                     ItemList.ewethrate_hoe = new HoeItem(ToolMaterialList.ewethrate, 0, 1.0f, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_hoe")),
+
                     ItemList.ewethrate_pickaxe = new PickaxeItem(ToolMaterialList.ewethrate, -7, -2.8f, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_pickaxe")),
+
                     ItemList.ewethrate_sword = new SwordItem(ToolMaterialList.ewethrate, 3, -2.4f, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_sword")),
+
                     ItemList.ewethrate_shovel = new ShovelItem(ToolMaterialList.ewethrate, 1.5f, -3.0F, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_shovel")),
 
-                    ItemList.ewethrate_block = new BlockItem(BlockList.ewethrate_block, new Item.Properties().group(EWETHRATE)).setRegistryName(BlockList.ewethrate_block.getRegistryName())
+                    ItemList.ewethrate_helmet = new ArmorItem(ArmourMaterialList.ewethrate, EquipmentSlotType.HEAD, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_helmet")),
+                    ItemList.ewethrate_chestplate = new ArmorItem(ArmourMaterialList.ewethrate, EquipmentSlotType.CHEST, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_chestplate")),
+                    ItemList.ewethrate_leggings = new ArmorItem(ArmourMaterialList.ewethrate, EquipmentSlotType.LEGS, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_leggings")),
+                    ItemList.ewethrate_boots = new ArmorItem(ArmourMaterialList.ewethrate, EquipmentSlotType.FEET, new Item.Properties().group(EWETHRATE)).setRegistryName(location("ewethrate_boots")),
+
+                    ItemList.ewethrate_block = new BlockItem(BlockList.ewethrate_block, new Item.Properties().group(EWETHRATE)).setRegistryName(BlockList.ewethrate_block.getRegistryName()),
+
+                    ItemList.ewethrate_ore = new BlockItem(BlockList.ewethrate_ore, new Item.Properties().group(EWETHRATE)).setRegistryName(BlockList.ewethrate_ore.getRegistryName()),
+                    ItemList.ewethrate_ore_nether = new BlockItem(BlockList.ewethrate_ore_nether, new Item.Properties().group(EWETHRATE)).setRegistryName(BlockList.ewethrate_ore_nether.getRegistryName()),
+                    ItemList.ewethrate_ore_end = new BlockItem(BlockList.ewethrate_ore_end, new Item.Properties().group(EWETHRATE)).setRegistryName(BlockList.ewethrate_ore_end.getRegistryName())
+
             );
 
             logger.info("Items registered.");
@@ -71,10 +87,11 @@ public class EwethrateMod
         public static void registerBlocks(final RegistryEvent.Register<Block> event)
         {
             event.getRegistry().registerAll(
-                    BlockList.ewethrate_block = new Block(Block.Properties.create(Material.IRON)
-                        .hardnessAndResistance(2.0f, 3.0f)
-                        .sound(SoundType.METAL))
-                        .setRegistryName(location("ewethrate_block"))
+                    BlockList.ewethrate_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.METAL)).setRegistryName(location("ewethrate_block")),
+
+                    BlockList.ewethrate_ore = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.METAL)).setRegistryName(location("ewethrate_ore")),
+                    BlockList.ewethrate_ore_nether = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.METAL)).setRegistryName(location("ewethrate_ore_nether")),
+                    BlockList.ewethrate_ore_end = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.METAL)).setRegistryName(location("ewethrate_ore_end"))
             );
 
             logger.info("Blocks registered.");

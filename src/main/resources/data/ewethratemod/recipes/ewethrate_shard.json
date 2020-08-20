@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients":
+    [ 
+        {"item": "ewethratemod:ewethrate_block"}
+    ],
+
+    "result": {"item": "ewethratemod:ewethrate_shard"},
+    "count": 9
+}   
